@@ -1,14 +1,29 @@
 let result = "";
 const cite = document.querySelector("cite");
 result += cite.nodeName + " ";
-result += ">" + " " + cite.parentElement.nodeName + " ";
-result += ">" + " " + cite.parentElement.parentElement.nodeName + " ";
+result +=
+  ">" +
+  " " +
+  cite.parentElement.nodeName +
+  "." +
+  cite.parentElement.className +
+  " ";
+result +=
+  ">" +
+  " " +
+  cite.parentElement.parentElement.nodeName +
+  "." +
+  cite.parentElement.parentElement.className +
+  " ";
 result +=
   ">" + " " + cite.parentElement.parentElement.parentElement.nodeName + " ";
+
 result +=
   ">" +
   " " +
   cite.parentElement.parentElement.parentElement.parentElement.nodeName +
+  "." +
+  cite.parentElement.parentElement.parentElement.parentElement.className +
   " ";
 result +=
   ">" +
