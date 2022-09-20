@@ -59,7 +59,9 @@ const parentList = [];
 let currentElement = document.querySelector("cite");
 // console.log(currentElement);
 while (currentElement) {
-  let currentElementName = currentElement.nodeName;
+  let currentElementName = currentElement.classList
+    ? currentElement.nodeName + "." + currentElement.classList
+    : currentElement.nodeName;
   // console.log(currentElementName);
   parentList.unshift(currentElementName.toLowerCase());
   // console.log(parentList);
