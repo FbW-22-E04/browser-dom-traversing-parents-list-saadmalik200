@@ -1,3 +1,4 @@
+/*
 let result = "";
 const cite = document.querySelector("cite");
 result += cite.nodeName + " ";
@@ -39,6 +40,9 @@ result +=
 
 console.log(result.split(" ").reverse().join(" "));
 
+*/
+//////////////////////////
+
 // const newArr = ["html", "body", "main", "section", "blockquote", "footer"];
 
 // let result2 = "";
@@ -48,3 +52,19 @@ console.log(result.split(" ").reverse().join(" "));
 // });
 // result2 += "CITE";
 // console.log(result2);
+
+/////////////////////
+
+const parentList = [];
+let currentElement = document.querySelector("cite");
+// console.log(currentElement);
+while (currentElement) {
+  let currentElementName = currentElement.nodeName;
+  // console.log(currentElementName);
+  parentList.unshift(currentElementName.toLowerCase());
+  // console.log(parentList);
+  // console.log(currentElement);
+  currentElement = currentElement.parentElement;
+  // console.log(currentElement);
+}
+console.log(parentList.join(" > "));
